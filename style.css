@@ -1,0 +1,341 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    height: 70px;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+.navbar .logo {
+    color: #ff7200;
+    font-size: 40px;
+    font-weight: bold;
+}
+.navbar .menu {
+    list-style: none;
+    display: flex;
+    gap: 120px;
+}
+.navbar .menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.navbar .menu a:hover {
+    color: #ff8c32;
+}
+
+/* HERO */
+.main {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('1.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin-top: 70px;
+}
+.hero-content {
+    text-align: center;
+}
+.main h1 {
+    font-size: 90px;
+}
+
+/* HOME STICKERS */
+.home-info {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+.info-sticker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-weight: 500;
+    border-radius: 12px;
+    margin: 5px 0;
+
+    backdrop-filter: blur(8px) saturate(120%);
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+    transition: 0.25s;
+}
+
+/* ABOUT TEXT */
+/* HIGHLIGHT TITLES (About & Products) */
+.highlight-title {
+    font-size: 50px; /* dati 36px */
+    margin-bottom: 50px;
+    color: #ff7200;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.3);
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+/* CENTER ABOUT TITLE */
+#about .highlight-title {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;   /* IMPORTANT para gumana ang auto margins */
+}
+
+/* ABOUT PARAGRAPHS - ENHANCED */
+.about p {
+    max-width: 900px;       /* Limit para madaling basahin */
+    margin: 20px auto 50px auto;
+    font-size: 18px;        /* Mas malaki at readable */
+    color: #333;            /* Soft dark color */
+    line-height: 1.8;       /* Mas airy at madaling basahin */
+    text-align: center;     /* Center align para elegant look */
+    background: rgba(255,255,255,0.1); /* subtle highlight */
+    padding: 20px 25px;     /* Padding sa paligid ng text */
+    border-radius: 15px;    /* Rounded edges sa highlight */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05); /* Soft shadow para depth */
+    transition: transform 0.3s ease;
+}
+
+.about p:hover {
+    transform: translateY(-5px);  /* Slight lift on hover */
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1); /* stronger shadow */
+}
+
+
+/* ABOUT SLIDER */
+.about-card-slider {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+/* ABOUT CARD SLIDER */
+.about-card-slider {
+    max-width: 900px;      
+    margin: 40px auto;     
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+}
+
+/* INNER SLIDER */
+.about-card-slider .inner-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 450px;          /* nice proportion */
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SLIDES IMAGES */
+.about-card-slider .inner-slides img {
+    width: auto;             
+    max-width: 100%;         
+    height: 100%;            
+    flex-shrink: 0;
+    object-fit: contain;     /* hindi masyadong crop */
+    object-position: center;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1); /* subtle depth */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* HOVER EFFECT */
+.about-card-slider .inner-slides img:hover {
+    transform: scale(1.05);               /* slight zoom on hover */
+    box-shadow: 0 12px 35px rgba(0,0,0,0.2); /* deeper shadow */
+}
+
+
+.about-card-slider .inner-slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.about-card-slider .inner-slides {
+    display: flex;
+    width: 200%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+.about-card-slider .inner-slides .slide {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+}
+.about-card-slider .inner-slides .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.about-card-slider .inner-prev,
+.about-card-slider .inner-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+.about-card-slider .inner-prev { left: 20px; }
+.about-card-slider .inner-next { right: 20px; }
+.about-card-slider .inner-prev:hover,
+.about-card-slider .inner-next:hover { background: rgba(0,0,0,0.8); }
+
+
+
+
+/* MISSION, VISION, CORE VALUES */
+.mission-vision-values {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+.mv-card {
+    background: #fff;
+    padding: 25px 20px;
+    border-radius: 25px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+    width: 300px;
+    transition: transform 0.3s;
+    text-align: center;
+}
+.mv-card:hover { transform: translateY(-8px); }
+.mv-card h3 { font-size: 22px; color: #ff7200; margin-bottom: 15px; }
+.mv-card p { font-size: 15px; color: #555; line-height: 1.6; }
+.mv-card ul { list-style: disc; padding-left: 20px; text-align: left; color: #555; }
+.mv-card ul li { margin-bottom: 8px; }
+
+/* PRODUCTS */
+.products {
+    padding: 80px 60px 200px 50px;
+    text-align: center;
+    background-image: url('images/8.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* PRODUCTS TITLE */
+.products h2 {
+    font-size: 50px; /* dati siguro 36px o 40px */
+    color: #ff7200;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+/* PRODUCT CARD TITLES */
+.card h3 {
+    font-size: 26px; /* dati 20px */
+    color: #222;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* PRODUCT CARD PARAGRAPHS */
+.card p {
+    font-size: 16px; /* dati 15px */
+    color: #555;
+}
+
+
+.product-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+.card {
+    width: 350px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 40px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    text-align: center;
+}
+.card:hover { transform: translateY(-10px); }
+.card h3 { margin-top: 20px; font-size: 20px; color: #222; }
+.card p { margin-top: 10px; color: #555; font-size: 15px; }
+.card img { width: 100%; border-radius: 15px; }
+
+/* INNER SLIDER (Reusable) */
+.inner-slider { position: relative; overflow: hidden; width: 100%; height: 250px; border-radius: 15px; margin-top: 15px; }
+.inner-slides { display: flex; transition: transform 0.5s ease-in-out; }
+.inner-slides img { width: 100%; flex-shrink: 0; object-fit: cover; border-radius: 15px; }
+.inner-prev, .inner-next { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: #fff; border: none; font-size: 20px; padding: 5px 10px; cursor: pointer; border-radius: 50%; z-index: 10; }
+.inner-prev { left: 10px; }
+.inner-next { right: 10px; }
+.inner-prev:hover, .inner-next:hover { background: rgba(0,0,0,0.8); }
+
+/* LOCATION */
+.location {
+    padding: 60px 20px;
+    background: #f4f4f4;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+.location h2 { font-size: 36px; margin-bottom: 20px; }
+.map-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.map-container iframe {
+    width: 100%;
+    height: 600px;
+    border: 0;
+    border-radius: 20px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .navbar .menu { display: none; }
+    .main h1 { font-size: 40px; }
+    .info-sticker
